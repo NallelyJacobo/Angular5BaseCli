@@ -24,6 +24,7 @@ import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
 import {LoginComponent} from './login/login.component';
 import { ScreenLoginComponent } from './screen-login/screen-login.component';
+import {MatSelectModule} from '@angular/material/select';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -46,7 +47,7 @@ export const MATERIAL_COMPONENTS = [
     PasivoComponent,
     ReactivoComponent,
     LoginComponent,
-    ScreenLoginComponent
+    ScreenLoginComponent,
     
   ],
   imports: [
@@ -55,6 +56,7 @@ export const MATERIAL_COMPONENTS = [
     HttpClientModule,
     BrowserAnimationsModule,
     MATERIAL_COMPONENTS,
+    MatSelectModule,
     FormsModule,
     RouterModule.forRoot(routes)
   ],

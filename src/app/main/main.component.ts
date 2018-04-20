@@ -34,3 +34,11 @@ export class MainComponent implements OnInit {
 /*nombreFuncion(variable: tipoDato){
   acciones
 }*/
+
+export class SelectOverviewExample {
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+}

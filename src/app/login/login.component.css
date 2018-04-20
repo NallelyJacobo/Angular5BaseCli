@@ -1,0 +1,13 @@
+.login-container{
+    border: 60px;
+    background-color: rgb(130, 205, 235);
+    margin: 175px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+}
+
+.botton{
+    justify-content: center;
+}

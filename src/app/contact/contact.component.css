@@ -1,0 +1,4 @@
+.horizontal-container{ /*estilos de contenedor */
+    display: flex;
+    flex-direction: row;
+}

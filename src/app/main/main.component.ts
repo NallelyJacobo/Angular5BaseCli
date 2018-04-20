@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitHubService } from '../services/git-hub.service';
+import { GitHubModel } from '../model/git-hub-model';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  gitHubDataList: Array<GitHubModel>;
+  constructor(private _gitHubService: GitHubService) {
+    this.gitHubDataList = new Array<GitHubModel>();
+  }
 
   ngOnInit() {
   }
 
+  onSearchUser(userName: string){
+    this._gitHubService
+    .getUserInfo(userName)
+    .subscribe( x => {
+      this.gitHubDataList.push(x);
+    });
+  }
+
+  //evento borrar elemento por click
+  deleteClick(evento: GitHubModel){
+    this.gitHubDataList = this.gitHubDataList.filter(x => x != evento);
+  }
 }
+
+/*nombreFuncion(variable: tipoDato){
+  acciones
+}*/
